@@ -1,0 +1,22 @@
+server:
+ port: 4300
+ servlet:
+   context-path: "/college"
+   
+logging:
+  file: baeldung-disabled-console.log
+  level:
+    org:
+     hibernate:
+      show_sql: false
+      SQL: DEBUG      
+      type:
+        descriptor:
+          sql:
+            BasicBinder : TRACE 
+            
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    show-sql: false
+    properties.hibernate.format_sql: true
